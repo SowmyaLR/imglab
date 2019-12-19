@@ -138,6 +138,7 @@ function saveAsPascalVOC(){
  * @param {string} type : Mime type
  */
 function download(data, filename, type, encoding) {
+    console.log(data)
     encoding || (encoding = "utf-8")
     var blobData = new Blob([data], {type: type + ";charset="+encoding})
     saveAs(blobData, filename);
